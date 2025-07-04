@@ -3,37 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <title>Bishal Kafle</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            font-family: 'Orbitron', sans-serif;
-            overflow: hidden;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px 60px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            animation: fadeInUp 1.2s ease-out;
         }
 
         h1 {
-            color: #00ffcc;
-            font-size: 4rem;
-            text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
-            animation: glow 2s ease-in-out infinite alternate;
+            font-size: 3rem;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc;
+        @keyframes fadeInUp {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
             }
-            to {
-                text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 60px #00ffff;
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card {
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <h1>Bishal Kafle</h1>
+    <div class="card">
+        <h1>Bishal Kafle</h1>
+    </div>
 </body>
 </html>
